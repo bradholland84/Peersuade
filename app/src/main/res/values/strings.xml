@@ -4,11 +4,10 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
-<!-- TODO: Remove or change this placeholder text -->
     <string name="hello_discussion_fragment">Hello discussion fragment</string>
     <string name="hello_topic_fragment">Hello topic fragment</string>
     <string name="hello_vote_fragment">Hello vote fragment</string>
     <string name="discussion">DISCUSSION</string>
     <string name="topics">TOPICS</string>
-    <String name="vote">VOTE</String>
+    <string name="vote">VOTE</string>
 </resources>

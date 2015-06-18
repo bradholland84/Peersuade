@@ -3,9 +3,6 @@ package com.topdawgapps.peersuade;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -27,48 +24,18 @@ public class MainActivity extends AppCompatActivity implements
 
         setSupportActionBar(toolbar);
 
-        viewPager.setAdapter(new SectionPagerAdapter(getSupportFragmentManager()));
+        viewPager.setAdapter(new CustomPagerAdapter(getSupportFragmentManager()));
         tabLayout.setupWithViewPager(viewPager);
-    }
 
-    public class SectionPagerAdapter extends FragmentPagerAdapter {
-
-        public SectionPagerAdapter(FragmentManager fm) {
-            super(fm);
+        for (int i = 0; i < tabLayout.getTabCount(); i++) {
+            TabLayout.Tab tab = tabLayout.getTabAt(i);
+            tab.setCustomView(CustomPagerAdapter.getTabView(i, this));
         }
-
-        @Override
-        public Fragment getItem(int position) {
-            switch (position) {
-                case 0:
-                    return new DiscussionFragment();
-                case 1:
-                    return new TopicFragment();
-                default:
-                    return new VoteFragment();
-            }
-        }
-
-        @Override
-        public int getCount() {
-            return 3;
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            switch (position) {
-                case 0:
-                    return "Discussions";
-                case 1:
-                    return "Topics";
-                default:
-                    return "Vote";
-            }
-        }
+        viewPager.setCurrentItem(1, true);
     }
 
     @Override
     public void onFragmentInteraction(Uri uri) {
-
+        //TODO: implement custom interaction listeners for all three fragments
     }
 }

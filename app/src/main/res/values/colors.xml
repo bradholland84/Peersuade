@@ -9,5 +9,5 @@
     <color name="icons">#FFFFFF</color>
     <color name="divider">#B6B6B6</color>
     <color name="tab_active">#FFFFFF</color>
-    <color name="tab_inactive">#B3E5FC</color>
+    <color name="tab_inactive">#ff97c2d6</color>
 </resources>
