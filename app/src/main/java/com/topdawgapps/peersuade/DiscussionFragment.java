@@ -67,6 +67,13 @@ public class DiscussionFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_discussion, container, false);
     }
 
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        //methods requiring Context can be here
+
+    }
+
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {

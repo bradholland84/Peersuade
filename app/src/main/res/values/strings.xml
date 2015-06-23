@@ -3,7 +3,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
+    <string name="message_hint">Send message</string>
     <string name="hello_discussion_fragment">Hello discussion fragment</string>
     <string name="hello_topic_fragment">Hello topic fragment</string>
     <string name="hello_vote_fragment">Hello vote fragment</string>
