@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity implements
         TopicFragment.OnFragmentInteractionListener,
         VoteFragment.OnFragmentInteractionListener {
 
-    // TODO: change this to your own Firebase URL
     private static final String FIREBASE_URL = "https://radiant-torch-7422.firebaseio.com";
     private String mUsername;
 
