@@ -7,7 +7,6 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 
@@ -65,8 +64,9 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public void onTopicChosen(String topic, String stance) {
-        //TODO: make changes in discussion fragment based on the user's chosen topic
-        Toast.makeText(this, mUsername + stance, Toast.LENGTH_LONG).show();
+        //make changes in discussion fragment based on the user's chosen topic
+        Discussion d = new Discussion(topic);
+        discussionFirebaseRef.setValue(d);
     }
 
     @Override

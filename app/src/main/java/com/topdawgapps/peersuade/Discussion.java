@@ -9,17 +9,22 @@ public class Discussion {
 
     private String title;
     private Boolean isRead;
-    private Date createdOn;
+    private String createdOn;
+
+    public Discussion(String title) {
+        this.title = title;
+        this.createdOn = new Date().toString();
+    }
 
     public Discussion(String title, Date createdOn) {
         this.title = title;
-        this.createdOn = createdOn;
+        this.createdOn = createdOn.toString();
     }
 
     public Discussion(String title, boolean isRead, Date createdOn) {
         this.title = title;
         this.isRead = isRead;
-        this.createdOn = createdOn;
+        this.createdOn = createdOn.toString();
     }
 
     @SuppressWarnings("unused")
@@ -43,11 +48,11 @@ public class Discussion {
         this.isRead = isRead;
     }
 
-    public Date getCreatedOn() {
+    public String getCreatedOn() {
         return createdOn;
     }
 
     public void setCreatedOn(Date createdOn) {
-        this.createdOn = createdOn;
+        this.createdOn = createdOn.toString();
     }
 }

@@ -6,8 +6,6 @@ import android.widget.TextView;
 
 import com.firebase.client.Query;
 
-import java.util.Date;
-
 /**
  * Created by Brad on 7/4/2015.
  */
@@ -35,8 +33,8 @@ public class DiscussionListAdapter extends FirebaseListAdapter<Discussion> {
         TextView tv = (TextView) view.findViewById(R.id.tv_discussion_title);
         tv.setText(title);
 
-        Date date = d.getCreatedOn();
+        String date = d.getCreatedOn();
         TextView tv_date = (TextView) view.findViewById(R.id.tv_discussion_date);
-        tv_date.setText(date.toString());
+        tv_date.setText(date);
     }
 }
