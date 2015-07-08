@@ -10,21 +10,26 @@ public class Discussion {
     private String title;
     private Boolean isRead;
     private String createdOn;
+    private String user1;
+    private String user2;
 
-    public Discussion(String title) {
+    public Discussion(String title, String user1, String user2) {
         this.title = title;
         this.createdOn = new Date().toString();
+        this.user1 = user1;
+        this.user2 = user2;
     }
 
-    public Discussion(String title, Date createdOn) {
+
+    public Discussion(String title, String createdOn) {
         this.title = title;
-        this.createdOn = createdOn.toString();
+        this.createdOn = createdOn;
     }
 
-    public Discussion(String title, boolean isRead, Date createdOn) {
+    public Discussion(String title, boolean isRead, String createdOn) {
         this.title = title;
         this.isRead = isRead;
-        this.createdOn = createdOn.toString();
+        this.createdOn = createdOn;
     }
 
     @SuppressWarnings("unused")
@@ -52,7 +57,23 @@ public class Discussion {
         return createdOn;
     }
 
-    public void setCreatedOn(Date createdOn) {
-        this.createdOn = createdOn.toString();
+    public void setCreatedOn(String createdOn) {
+        this.createdOn = createdOn;
+    }
+
+    public String getUser1() {
+        return user1;
+    }
+
+    public void setUser1(String user1) {
+        this.user1 = user1;
+    }
+
+    public String getUser2() {
+        return user2;
+    }
+
+    public void setUser2(String user2) {
+        this.user2 = user2;
     }
 }

@@ -109,6 +109,13 @@ public class TopicFragment extends Fragment {
                 onButtonPressed("dummy 1", et.getText().toString());
             }
         });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onButtonPressed("dummy 2", et2.getText().toString());
+            }
+        });
     }
 
     public void onButtonPressed(String topic, String stance) {
@@ -125,9 +132,9 @@ public class TopicFragment extends Fragment {
 
     // Places this user as a guest of this topic, waiting to be paired for discussion
     public void makeGuest(Firebase topic, String stance) {
-        Firebase guestRef = topic.child("guests").child(mUsername);
-        Guest me = new Guest(mUsername, stance);
-        guestRef.setValue(me);
+        //Firebase guestRef = topic.child("guests").child(mUsername);
+        //Guest me = new Guest(mUsername, stance);
+        //guestRef.setValue(me);
     }
 
     public interface onTopicChosenListener {

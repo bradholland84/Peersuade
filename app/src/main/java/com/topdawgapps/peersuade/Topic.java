@@ -1,7 +1,5 @@
 package com.topdawgapps.peersuade;
 
-import java.util.Date;
-
 /**
  * Created by Brad on 7/4/2015.
  */
@@ -9,9 +7,9 @@ public class Topic {
 
     private String title;
     private String URL;
-    private Date date;
+    private String date;
 
-    public Topic(String title, String URL, Date date) {
+    public Topic(String title, String URL, String date) {
         this.title = title;
         this.URL = URL;
         this.date = date;
@@ -38,11 +36,11 @@ public class Topic {
         this.URL = URL;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 }
